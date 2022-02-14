@@ -1,0 +1,75 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: sans-serif;
+  background-color: lightseagreen;
+}
+
+.sidebar {
+  background-color: black;
+  width: 100px;
+  height: 100%;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transition: 400ms ease;
+}
+
+.sidebar > * {
+  height: 50px;
+  width: 100%;
+}
+
+.expand-sidebar {
+  background-color: aliceblue;
+  width: 50px;
+  align-self: flex-end;
+  border-radius: 50%;
+}
+
+.expand-sidebar a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.option-1 {
+  background-color: blue; 
+}
+.option-2 {
+  background-color: red;
+}
+.option-3 {
+  background-color: green; 
+}
+.option-4 {
+  background-color: yellow; 
+}
+.option-5 {
+  background-color: slateblue;
+}
+
+#sidebar-minimize-button {
+  display: none;
+}
+
+#page-sidebar:target {
+  width: 400px;
+}
+
+#page-sidebar:target #sidebar-minimize-button {
+  display: grey;
+  display: block;
+}
+
+#page-sidebar:target #sidebar-expand-button {
+  display: none;
+}
